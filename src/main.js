@@ -12,6 +12,10 @@ const animateSnake=function() {
   paintBody(oldHead);
   unpaintSnake(oldTail);
   paintHead(head);
+  if(snake.eatItself()||snake.isOutOfArea(numberOfCols,numberOfRows)){
+    clearInterval(animator);
+    return ;
+  }
   if(head.isSameCoordAs(food)) {
     snake.grow();
     createFood(numberOfRows,numberOfCols);

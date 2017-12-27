@@ -43,6 +43,10 @@ Position.prototype.getCoord=function() {
   return [this.x,this.y];
 }
 
+Position.prototype.isInArea=function(length,width){
+  return (this.x>0)&&(this.x<(length-1))&&(this.y>0)&&(this.y<(width-1))
+}
+
 const generateRandomPosition=function(maxX,maxY) {
   let x=generateRandomNumberBetween(0,maxX);
   let y=generateRandomNumberBetween(0,maxY);
