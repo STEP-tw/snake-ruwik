@@ -5,6 +5,10 @@ let numberOfCols=120;
 
 let animator=undefined;
 
+const displayButton = function(){
+  document.getElementById('playAgain').style.display="block";
+}
+
 const animateSnake=function() {
   let oldHead=snake.getHead();
   let oldTail=snake.move();
@@ -13,6 +17,7 @@ const animateSnake=function() {
   unpaintSnake(oldTail);
   paintHead(head);
   if(snake.eatItself()||snake.isOutOfArea(numberOfCols,numberOfRows)){
+    displayButton();
     clearInterval(animator);
     return ;
   }
