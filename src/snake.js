@@ -25,14 +25,14 @@ Snake.prototype={
     this.head=this.head.turnRight();
   },
   eatItself:function(){
-    let headPosition = snake.getHead();
-    let body = snake.getBody();
+    let headPosition = this.getHead();
+    let body = this.getBody();
     return body.some((bodyPosition)=>{
       return bodyPosition.isSameCoordAs(headPosition)
     });
   },
   isOutOfArea:function(length,width){
-    let headPosition = snake.getHead();
+    let headPosition = this.getHead();
     return (!headPosition.isInArea(length,width));
   }
 }
