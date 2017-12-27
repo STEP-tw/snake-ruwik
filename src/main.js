@@ -1,7 +1,7 @@
 let snake=undefined;
 let food=undefined;
-let numberOfRows=100;
-let numberOfCols=100;
+let numberOfRows=60;
+let numberOfCols=120;
 
 let animator=undefined;
 
