@@ -1,11 +1,12 @@
 let snake=undefined;
 let food=undefined;
-let numberOfRows=60;
-let numberOfCols=120;
+let numberOfRows=100;
+let numberOfCols=100;
 
 let animator=undefined;
 
 const displayButton = function(){
+  document.getElementById('gameOverText').style.display="block";
   document.getElementById('playAgain').style.display="block";
 }
 
